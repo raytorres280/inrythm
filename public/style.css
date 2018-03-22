@@ -1,5 +1,10 @@
+html {
+  height: 100vh;
+  background-color: orange;
+}
 body {
-  font-family: sans-serif;
+  min-height: 100vh;
+  background-color: pink;
 }
 
 a {
@@ -18,4 +23,44 @@ nav a {
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+.root {
+  height: 100vh;
+  background-color: yellow;
+}
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100%;
+  background-color: red;
+}
+
+.search-container {
+  display: flex;
+  flex: 2;
+  width: 50%;
+  align-items: center;
+  flex-direction: column;
+  background-color: aqua;
+}
+
+.search-field {
+  display: flex;
+  background-color: blueviolet;
+}
+.btn-container {
+  display: flex;
+  flex: 5;
+}
+
+.album-list-container {
+  display: flex;
+  flex: 8;
+  width: 100%;
+  background-color: greenyellow;
 }

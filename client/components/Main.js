@@ -1,12 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Search from './Search'
+import AlbumsContainer from './AlbumsContainer'
 
-export default class Main extends Component {
-  render() {
+const Main = () => {
     return (
-      <div>
+      <div className="main">
         {/* searchfield */}
         {/* listcontainer */}
+        <Search />
+				<AlbumsContainer />
       </div>
     )
-  }
 }
+
+export default Main
