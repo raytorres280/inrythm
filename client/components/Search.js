@@ -30,11 +30,12 @@ class Search extends Component {
         >
           <TextField
             id="search-field"
+            hintText="Enter an artist's name"
             value={this.state.searchField}
             onChange={(e) => this.setState({ searchField: e.target.value })}
             className="search-field"
             fullWidth={true}
-            underlineStyle={{ color: blue500 }}
+            underlineFocusStyle={{ borderColor: blue500 }}
           />
           <FlatButton
             backgroundColor="#31b3ff"

@@ -47,6 +47,7 @@ form div {
   align-items: center;
   flex-direction: column;
   background-color: whitesmoke;
+  margin-top: 2%;
 }
 
 .search-field {
@@ -66,10 +67,16 @@ form div {
   height: 80%;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .search-btn {
   height: 100%;
   width: 50%;
+}
+
+.album-list {
+  height: 100%;
+  width: 100%;
+  overflow-Y: auto;
 }
