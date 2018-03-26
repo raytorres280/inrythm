@@ -1,19 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {Provider} from 'react-redux'
-import {Router} from 'react-router-dom'
-import history from './history'
-import store from './store'
-import App from './app'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+import App from "./app";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history}>
-      <MuiThemeProvider>
-        <App />
-      </MuiThemeProvider>
-    </Router>
+    <MuiThemeProvider>
+      <App />
+    </MuiThemeProvider>
   </Provider>,
-  document.getElementById('app')
-)
+  document.getElementById("app")
+);
