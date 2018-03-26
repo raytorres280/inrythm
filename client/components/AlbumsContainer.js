@@ -27,10 +27,17 @@ class AlbumsContainer extends Component {
                         {this.props.albums && this.props.albums.length > 0 ? this.props.albums.map((tile) => (
                                 <Card key={tile.collectionId}>
                                     <CardMedia
-                                    overlay={<CardTitle title={tile.collectionCensoredName} subtitle={tile.artistName} />}
+                                        overlay={<CardTitle title={tile.collectionCensoredName} subtitle={tile.artistName} />}
                                     >
-                                    <img src={tile.artworkUrl100} alt="" />
+                                    <img src={tile.artworkUrl100} />
                                     </CardMedia>
+                                    <CardText expandable={true}>
+                                        <List>
+                                            {
+                                                <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
+                                            }
+                                        </List>
+                                    </CardText>
                                 </Card>
                         )) : <h3>no data</h3> }
                     </GridList>

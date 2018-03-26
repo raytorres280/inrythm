@@ -3,7 +3,7 @@ import { fetchAlbumsThunk, resetAlbums } from '../store'
 import { connect } from 'react-redux'
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
-import { Card, CardMedia, CardTitle } from 'material-ui/Card';
+import { Card } from 'material-ui/Card';
 import { blue500 } from 'material-ui/styles/colors';
 
 class Search extends Component {
@@ -36,13 +36,13 @@ class Search extends Component {
             fullWidth={true}
             underlineStyle={{ color: blue500 }}
           />
-            <FlatButton
-              backgroundColor="#31b3ff"
-              hoverColor="#019BF6"
-              fullWidth={true}
-              label="Search"
-              onClick={() => this.handleSearch()} />
-            <FlatButton fullWidth={true} label="Reset" onClick={() => this.handleReset()} />
+          <FlatButton
+            backgroundColor="#31b3ff"
+            hoverColor="#019BF6"
+            fullWidth={true}
+            label="Search"
+            onClick={() => this.handleSearch()} />
+          <FlatButton fullWidth={true} label="Reset" onClick={() => this.handleReset()} />
         </Card>
       )
     }
