@@ -4,6 +4,7 @@ import {GridList, GridTile} from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import Subheader from 'material-ui/Subheader';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
+import {Card, CardMedia, CardTitle } from 'material-ui/Card';
 
 class AlbumsContainer extends Component {
     constructor(props) {
@@ -15,24 +16,25 @@ class AlbumsContainer extends Component {
 
     render() {
         return (
-            <div className="album-list-container">
-                <GridList
-                    cellHeight={180}
-                    style={styles.gridList}
-                    >
-                    <Subheader>Results</Subheader>
-                    {this.props.albums ? this.props.albums.map((tile) => (
-                        <GridTile
-                        key={tile.collectionId}
-                        title={tile.collectionSensoredName}
-                        subtitle={<span>by <b>{tile.artistName}</b></span>}
-                        actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
+                <Card
+                    className="album-list-container"
+                >
+                    <GridList
+                        cellHeight="auto"
+                        style={styles.gridList}
+                        cols={4}
                         >
-                        <img src={tile.artworkUrl100} />
-                        </GridTile>
-                    )) : <h3>no data</h3> }
-                </GridList>
-            </div>
+                        {this.props.albums && this.props.albums.length > 0 ? this.props.albums.map((tile) => (
+                                <Card key={tile.collectionId}>
+                                    <CardMedia
+                                    overlay={<CardTitle title={tile.collectionCensoredName} subtitle={tile.artistName} />}
+                                    >
+                                    <img src={tile.artworkUrl100} alt="" />
+                                    </CardMedia>
+                                </Card>
+                        )) : <h3>no data</h3> }
+                    </GridList>
+                </Card>
         )
   }
 }
@@ -46,14 +48,13 @@ const mapState = (state) => {
 export default connect(mapState, null)(AlbumsContainer)
 
 const styles = {
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
-    },
     gridList: {
-      width: 750,
+      width: '100%',
       height: '100%',
-      overflowY: 'auto',
+      overflowY: 'auto'
+    },
+    tile: {
+        height: 200,
+        width: 200
     },
   };

@@ -1,10 +1,10 @@
 html {
   height: 100vh;
-  background-color: orange;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   min-height: 100vh;
-  background-color: pink;
+  background-color: white;
 }
 
 a {
@@ -27,7 +27,7 @@ form div {
 
 .root {
   height: 100vh;
-  background-color: yellow;
+  background-color: white;
 }
 .main {
   display: flex;
@@ -37,7 +37,7 @@ form div {
   margin-left: 10%;
   margin-right: 10%;
   height: 100%;
-  background-color: red;
+  background-color: white;
 }
 
 .search-container {
@@ -46,21 +46,28 @@ form div {
   width: 50%;
   align-items: center;
   flex-direction: column;
-  background-color: aqua;
+  background-color: whitesmoke;
 }
 
 .search-field {
   display: flex;
-  background-color: blueviolet;
+  flex: 5;
 }
 .btn-container {
   display: flex;
-  flex: 5;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
 .album-list-container {
   display: flex;
   flex: 8;
   width: 100%;
-  background-color: greenyellow;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.search-btn {
+  height: 100%;
+  width: 50%;
 }
