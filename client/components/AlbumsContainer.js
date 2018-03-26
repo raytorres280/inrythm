@@ -31,13 +31,6 @@ class AlbumsContainer extends Component {
                                     >
                                     <img src={tile.artworkUrl100} />
                                     </CardMedia>
-                                    <CardText expandable={true}>
-                                        <List>
-                                            {
-                                                <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
-                                            }
-                                        </List>
-                                    </CardText>
                                 </Card>
                         )) : <h3>no data</h3> }
                     </GridList>
